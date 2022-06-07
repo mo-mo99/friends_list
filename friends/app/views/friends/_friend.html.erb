@@ -1,0 +1,10 @@
+
+<div class="card" style="width: 25rem;">
+  
+  <div class="card-body">
+    <h3 class="card-title"><%= friend.first_name %> <%= friend.last_name %></h3>
+    <p class="card-text"><%= friend.email %> | <%= friend.phone %> | <%= friend.twitter %> </p>
+    <%= link_to "Edit this friend", edit_friend_path(friend.id), class:"btn btn-secondary" %>
+    <%= link_to "Back to friends", friends_path, class:"btn btn-dark" %>
+  </div>
+</div>

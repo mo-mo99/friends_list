@@ -15,6 +15,7 @@
   </thead>
   <tbody class="table-group-divider">
   <% @friends.each do |friend| %>
+    <% if friend.user == current_user %>
     
     <tr>
       <th scope="row">1</th>
@@ -25,9 +26,9 @@
       <td><%= friend.twitter %></td>
       <td><%= link_to "Show this friend", friend %></td>
       <td><%= link_to "Edit this friend", edit_friend_path(friend) %></td>
-      <td><%= link_to "Destroy", friend, method: :delete, 
-      data: { confirm:'Are you sure?' } %></td>
+      <td><%= button_to "Destroy", friend, method: :delete, data: {confirm: "Are you sure?"} %></td>
     </tr>
+    <% end %>
   </tbody>
   <% end %>
 </table>

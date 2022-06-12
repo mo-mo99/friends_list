@@ -2,9 +2,10 @@
 
 <%= render "form", friend: @friend %>
 
-<br>
+
 
 <div>
-  
+  <%= button_to "Destroy", @friend, method: :delete, class:"btn btn-danger btn-sm"%>
+  <br/>
   <%= link_to "Back to friends", friends_path, class:"btn btn-dark" %>
 </div>
